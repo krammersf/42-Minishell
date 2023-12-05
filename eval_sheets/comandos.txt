@@ -1,0 +1,32 @@
+
+https://docs.google.com/spreadsheets/d/1DddJSgg7KUnFrJ9dayrl5J9ngylKX1cC4JwMT4HJTBA/edit#gid=0
+
+nm -g ./minishell | grep "U"
+
+//comandos que testei e funcionam:
+
+ls
+pwd
+wc
+echo
+cp
+rm
+touch
+top
+df
+du
+man
+hostname
+more
+:command not found
+
+//usar:
+
+make
+./minishell (enter)
+crl d --> para sair do programa
+
+echo $0
+ps -p $$
+echo $SHELL
+

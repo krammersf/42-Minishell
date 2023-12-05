@@ -1,0 +1,117 @@
+Mandatory part
+Compilation
+• Use "make -n" to ensure that the project compiles with "-Wall -Wextra -Werror". If not, check the "invalid compilation" flag.
+• The minishell compiles without any errors. If it's not not the case, check the flag.
+• The Makefile should not re-link. If this is not the case, check the flag.
+Simple command and global variables
+• Execute a simple command with an absolute PATH such as /bin/ls or any other command with no options.
+• How many global variables are there? For what? Ask the person evaluated to give you a concrete example to demonstrate that their use is mandatory and consistent.
+• Test an empty command.
+• Test your space and tabs.
+• When crashing, select the "crash" flag.
+• If something does not work, check the flag "incomplete work".
+Arguments
+• Execute a simple command with an absolute PATH such as /bin/ls or any other command, with option sans '' (single quotes) nor "" (double quotes).
+• Repeat this test several times with different commands and different arguments.
+• When crashing, select the "crash" flag.
+• If something does not work, check the "incomplete work" flag.
+echo
+• Launch the echo command without argument or options, or with the -n option.
+• Repeat this test several times with different arguments.
+• When crashing, select the "crash" flag.
+• If you thing to march past, carry the flag "incomplete work".
+exit
+• Launch the command exit with and without arguments.
+• Repeat this test several times with different arguments.
+• Never glance at the minishell.
+• When crashing, select the "crash" flag.
+• If you chose to march past, carry the flag "incomplete work"
+Return value of a process
+• Run simple commands with an absolute path such as /bin/ls or any other command with arguments but without '' (single quotes) or "" (double quotes), then run "echo $?". Check the displayed value. You can do it again in bash and compare.
+• Repeat this test several times with different commands and different arguments.
+• Use commands that don't work such as '/bin/ls nullfile'.
+• Try expressions like $2 + $? 
+• In case of crash, check the “crash” flag.
+• If something does not work, check the flag "incomplete work"
+Signals
+• ctrl-C in an empty prompt should display a new line with a new prompt.
+• ctrl-\ in an empty prompt should do nothing.
+• ctrl-D in an empty prompt should quit minishell. Then relaunch it.
+• ctrl-C in a prompt after writing stuff should show a new line with a new prompt.
+• Also, the buffer should be empty. Press "Enter" to ensure that the line previous has been executed.
+• ctrl-D in a prompt after writing stuff shouldn't do anything.
+• ctrl-\ in a prompt after writing stuff shouldn't do anything..
+• Try ctrl-C after issuing a blocking command, such as cat or grep with no arguments. 
+• Try ctrl-\ after running a blocking command, like cat or grep with no arguments. 
+• Try ctrl-D after issuing a command. blocking, like cat or grep without arguments. 
+• Repeat several times using different commands.
+• In case of crash, check the “crash” flag.
+• If something does not work, check the flag "incomplete work"
+Double Quotes
+• Run a simple command with arguments, but this time use quotes (add ';' and spaces between the quotes). 
+• Try a command like: echo "cat lol.c | cat > lol.c"
+• Don't try $.
+• In case of crash, check the “crash” flag.
+• If something does not work, check the "incomplete work" flag.
+Single Quotes
+• Execute commands with single quotes in the arguments.
+• Try empty arguments.
+• Do tests with environment variables, spaces, pipes, redirections between quotation marks.
+• echo '$USER' should display "$USER"
+• Nothing should be interpreted.
+env
+• Check that env is showing you the environment variables.
+export
+• Export environment variables, including some to replace old ones. 
+• Check the result with env.
+unset
+• Export environment variables, including some to replace old ones.
+• Use unset to remove some.
+• Check the result with approx.
+cd
+• Use the cd command to move through the tree and use /bin/ls to verify that you are in the correct directory.
+• Repeat this test several times with working and non-working cd.
+• Also try '.' and '..' in arguments.
+pwd
+• Use the pwd command, with and without arguments.
+• Repeat this test several times in different directories.
+• Try '.' and '..' in arguments.
+Relative path
+• Execute commands using a relative path.
+• Repeat this test several times in other folders with a complex relative path (lots of ..).
+Environment PATH
+• Execute commands but without PATH (ls, wc, awk, etc.).
+• Remove the $PATH and check if the commands no longer work.
+• Put several directories in PATH (directory 1:directory2) and check that they are evaluated from left to right.
+Redirection
+• Execute commands with redirects < and/or >
+• Repeat this test several times with different commands and arguments, and sometimes use >> instead of >.
+• Check if multiple instances of the same redirect fail. 
+• Test redirects with << (this should not necessarily update the history).
+Pipes
+• Execute commands with pipes such as 'cat file | grep bla | more'
+• Repeat several times with different commands and different arguments.
+• Try commands that fail such as 'ls nullfile | grep blah | more'
+• Mix pipes and redirections.
+Let's go crazy ! And the history
+• Enter a command, then ctrl-C, and press "Enter". The buffer should be empty and there should be nothing left to execute.
+• Can we navigate in the history with Up and Down (take the opportunity to relaunch commands)? 
+• Run commands that don't work such as 'dskdskdksd' and verify that everything works as expected.
+• 'cat cat | ls' must work.
+• Try really, really long commands with tons of arguments.
+• Have fun with this awesome minishell and enjoy it.
+Environment variables
+• Run echo with environment variables ($variable) as arguments.
+• Make sure $ is interpreted correctly. 
+• Check that quotes around $variables work correctly (as in bash). 
+• If USER does not exist, set it.
+• Then, echo "$USER" should display the value of $USER.
+Bonus part
+And, Or
+• Issue commands with &&, || and parentheses, and check that everything works as in bash.
+Wildcard
+• Use wildcards as arguments in the current directory.
+Surprise! Or not...
+• Set a value to the USER variable.
+• echo "$USER" should display the value of the variable USER.
+• echo "'$USER'" should display "$USER".
