@@ -5,7 +5,7 @@ This is a shell implementation called Minishell. It is a command-line interprete
 This project was developed in colaboration with damachad --> https://github.com/damachad
 
 Words of Wisdom
-Focus on the requirement 🎯
+Focus on the requirement
 
 Please implement only what the subject explicitly requests. Anything that is not requested is not a requirement, and each additional implementation increases development time and adds unnecessary complexity to the project.
 Perform extensive testing 🔬
@@ -18,10 +18,9 @@ Features
 
 
 
-
 This is a shell implementation called Minishell. It is a command-line interpreter that provides a basic shell environment and supports various features such as command execution, input parsing, redirections, pipes, environment variables, built-in commands, and signal handling.
 
-This project was developed in colaboration with [teroVF](https://github.com/teroVF).
+This project was developed in colaboration with [damachad]https://github.com/damachad/42_minishell.
 
 ## Words of Wisdom
 ### Focus on the requirement :dart:
@@ -54,7 +53,7 @@ Our reference shell is Bash, but running certain commands in other shells may pr
 - Built-in commands are implemented as separate functions and are executed within the shell process itself.
 - Error handling and reporting are done through a combination of error codes, error messages, and signal handling.
 
-## Usage
+## Usage (adapted from https://github.com/waltergcc/42-minishell/blob/main/README.md)
 
 To compile the Minishell program, use the provided Makefile by running `make` in the project directory. This will generate an executable named `minishell`.
 
@@ -98,7 +97,7 @@ make -n
 ```bash
 date
 ```
-> Wed  7 Jul 2021 11:00:00 AM -03
+> Mon  3 Dec 2023 11:00:00 AM -03 **************
 ```bash
 ifconfig
 ```
@@ -106,7 +105,7 @@ ifconfig
 ```bash
 who
 ```
-> wcorrea- tty2         2023-06-20 10:46 (tty2)
+> wcorrea- tty2         2023-06-20 10:46 (tty2) ******************
 ```bash
 [empty]
 ```
@@ -161,7 +160,7 @@ echo This is a test
 ```bash
 echo -n Hello World
 ```
-> Hello World/home/wcorrea-$
+> Hello World/home/wcorrea-$ *****************
 
 ### exit
 
@@ -463,7 +462,7 @@ pwd -L
 ```bash
 echo $PATH
 ```
-> /home/wcorrea-/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin
+> /home/wcorrea-/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin  *******************
 ```bash
 unset PATH
 ```
@@ -543,7 +542,7 @@ cat | cat | ls
 ```bash
 echo $USER
 ```
-> wcorrea-
+> wcorrea- **************************
 ```bash
 echo $notexist
 ```
@@ -551,11 +550,11 @@ echo $notexist
 ```bash
 echo "$HOME"
 ```
-> /home/wcorrea-
+> /home/wcorrea- ******************
 ```bash
 echo ~
 ```
-> /home/wcorrea-
+> /home/wcorrea-  ***********************
 ```bash
 echo ~test
 ```
@@ -567,7 +566,7 @@ echo test~
 ```bash
 echo ~/test
 ```
-> /home/wcorrea-/test
+> /home/wcorrea-/test  ******************
 
 ### Trouble Cases
 
@@ -579,22 +578,22 @@ $EMPTYVAR
 ```bash
 echo -n -n -n -n -n Hello World
 ```
-> Hello World/home/wcorrea-$
+> Hello World/home/wcorrea-$  ***********************
 
 ```bash
 echo -nnnnnnnnn Hello World
 ```
-> Hello World/home/wcorrea-$
+> Hello World/home/wcorrea-$  ********************
 
 ```bash
 echo $HOME.test
 ```
-> /home/wcorrea-.test
+> /home/wcorrea-.test ***********************
 
 ```bash
 echo $HOME/test
 ```
-> /home/wcorrea-/test
+> /home/wcorrea-/test *********************
 
 ```bash
 ;
@@ -725,11 +724,6 @@ unset TEST1 TEST2 TEST3 TEST4 TEST5 TEST6 TEST7 TEST8 9TEST9 TEST10 TEST11 TEST.
 ### Not required but done
 
 ```bash
-cd -
-```
-> go to the previous directory
-
-```bash
 << EOF
 ```
 > start the here document
@@ -743,5 +737,6 @@ cd -
 > append to a file
 
 ### Grade: 100/100
+
 ### Used tests
 - minishell_tester: https://github.com/kichkiro/minishell_tester
