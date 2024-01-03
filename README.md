@@ -53,7 +53,8 @@ Our reference shell is Bash, but running certain commands in other shells may pr
 - Built-in commands are implemented as separate functions and are executed within the shell process itself.
 - Error handling and reporting are done through a combination of error codes, error messages, and signal handling.
 
-## Usage (adapted from https://github.com/waltergcc/42-minishell/blob/main/README.md)
+## Usage 
+(adapted from https://github.com/waltergcc/42-minishell/blob/main/README.md)
 
 To compile the Minishell program, use the provided Makefile by running `make` in the project directory. This will generate an executable named `minishell`.
 
