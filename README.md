@@ -1,3 +1,4 @@
+
 # 42_Minishell
 
 This is a shell implementation called Minishell. It is a command-line interpreter that provides a basic shell environment and supports various features such as command execution, input parsing, redirections, pipes, environment variables, built-in commands, and signal handling.
@@ -9,6 +10,8 @@ Focus on the requirement
 
 Please implement only what the subject explicitly requests. Anything that is not requested is not a requirement, and each additional implementation increases development time and adds unnecessary complexity to the project.
 Perform extensive testing
+
+https://docs.google.com/spreadsheets/d/1DddJSgg7KUnFrJ9dayrl5J9ngylKX1cC4JwMT4HJTBA/edit#gid=0
 
 This project has many points of attention that have arisen during development. All of these points have been included in the tests on this page. While not exhaustive, they provide a starting point for things that should work and things that should not. Check the tests
 Study other shells
@@ -115,7 +118,7 @@ who
 [space]
 ```
 > print a new line
-- to make [tab] in bash first do C^v (crtl v) then [tab], everytime you want to do [tab], you have to do C^v
+- To insert a [tab] in Bash, first press Ctrl+V and then [tab]. Every time you want to insert a [tab], you have to first press Ctrl+V.
 ```bash
 [tab]
 ```
@@ -162,7 +165,7 @@ echo This is a test
 ```bash
 echo -n Hello World
 ```
-> Hello World/home/wcorrea-$ *****************
+> Hello World[MINISHELL]:~/fde-carv/minishell-$
 
 ### exit
 
@@ -464,7 +467,7 @@ pwd -L
 ```bash
 echo $PATH
 ```
-> /home/wcorrea-/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin  *******************
+> /home/fde-carv/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin
 ```bash
 unset PATH
 ```
@@ -515,8 +518,7 @@ cat Makefile | grep NAME | wc -l
 ```bash
 cat notexist | wc -l
 ```
->cat: notexist: No such file or directory
-0
+> cat: notexist: No such file or directory
 ```bash
 < Makefile grep NAME | wc -l > out
 ```
@@ -544,7 +546,7 @@ cat | cat | ls
 ```bash
 echo $USER
 ```
-> wcorrea- **************************
+> fde-carv
 ```bash
 echo $notexist
 ```
@@ -552,11 +554,7 @@ echo $notexist
 ```bash
 echo "$HOME"
 ```
-> /home/wcorrea- ******************
-```bash
-echo ~
-```
-> /home/wcorrea-  ***********************
+> /home/fde-carv
 ```bash
 echo ~test
 ```
@@ -565,10 +563,6 @@ echo ~test
 echo test~
 ```
 > test~
-```bash
-echo ~/test
-```
-> /home/wcorrea-/test  ******************
 
 ### Trouble Cases
 
@@ -580,22 +574,22 @@ $EMPTYVAR
 ```bash
 echo -n -n -n -n -n Hello World
 ```
-> Hello World/home/wcorrea-$  ***********************
+> Hello World[MINISHELL]:~/fde-carv/minishell-$
 
 ```bash
 echo -nnnnnnnnn Hello World
 ```
-> Hello World/home/wcorrea-$  ********************
+> Hello World[MINISHELL]:~/fde-carv/minishell-$
 
 ```bash
 echo $HOME.test
 ```
-> /home/wcorrea-.test ***********************
+> /home/fde-carv.test
 
 ```bash
 echo $HOME/test
 ```
-> /home/wcorrea-/test *********************
+> /home/fde-carv/test
 
 ```bash
 ;
@@ -635,11 +629,13 @@ echo $HOME/test
 ```bash
 d|
 ```
-> minishell: no support for pipe prompt
+--> open pipe >
+> minishell: d: command not found
 ```bash
 ls | wc |
 ```
-> minishell: no support for pipe prompt
+--> open pipe >
+> minishell: d: command not found
 ```bash
 ls | wc >
 ```
