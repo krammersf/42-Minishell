@@ -1,5 +1,5 @@
 
-# 42_Minishell
+# minishell
 
 This is a shell implementation called Minishell. It is a command-line interpreter that provides a basic shell environment and supports various features such as command execution, input parsing, redirections, pipes, environment variables, built-in commands, and signal handling.
 
