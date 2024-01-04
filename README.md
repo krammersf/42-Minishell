@@ -98,7 +98,7 @@ make -n
 ```bash
 date
 ```
-> Mon  3 Dec 2023 11:00:00 AM -03 **************
+> Mon  03 dec 2023 11:00:00 AM
 ```bash
 ifconfig
 ```
@@ -106,7 +106,7 @@ ifconfig
 ```bash
 who
 ```
-> wcorrea- tty2         2023-06-20 10:46 (tty2) ******************
+> fde-carv tty2         2023-12-203 11:02 (tty2)
 ```bash
 [empty]
 ```
