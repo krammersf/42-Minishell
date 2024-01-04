@@ -734,7 +734,19 @@ unset TEST1 TEST2 TEST3 TEST4 TEST5 TEST6 TEST7 TEST8 9TEST9 TEST10 TEST11 TEST.
 ```
 > append to a file
 
-### Grade: 100/100
+## Grade: 100/100
 
-### Used tests
+## Used tests
 - minishell_tester: https://github.com/kichkiro/minishell_tester
+ 
+### Disclaimer
+
+Maybe you could notice a different coding style. At 42 we need to follow some rules according to the coding standard of the school such as:
+```
+- No for, do while, switch, case or goto 
+- No functions with more than 25 lines 
+- No more than 5 functions per each file
+- No more than 5 variables in the same function
+- No assigns and declarations assigns in the same line
+```
+Click here to read the norm file of 42 school.
