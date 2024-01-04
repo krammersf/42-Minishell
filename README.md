@@ -5,10 +5,7 @@ This is a shell implementation called Minishell. It is a command-line interprete
 
 This project was developed in colaboration with damachad   -->  https://github.com/damachad
 
-Words of Wisdom
-Focus on the requirement
-
-Please implement only what the subject explicitly requests. Anything that is not requested is not a requirement, and each additional implementation increases development time and adds unnecessary complexity to the project.
+It was implement only what the subject explicitly requests. Anything that is not requested is not a requirement, and each additional implementation increases development time and adds unnecessary complexity to the project.
 Perform extensive testing
 
 https://docs.google.com/spreadsheets/d/1DddJSgg7KUnFrJ9dayrl5J9ngylKX1cC4JwMT4HJTBA/edit#gid=0
@@ -18,12 +15,6 @@ Study other shells
 
 Our reference shell is Bash, but running certain commands in other shells may produce different results and help us better understand why certain things happen. Use Bash as a reference, but be open to examining the workings of other shells.
 Features
-
-
-
-This is a shell implementation called Minishell. It is a command-line interpreter that provides a basic shell environment and supports various features such as command execution, input parsing, redirections, pipes, environment variables, built-in commands, and signal handling.
-
-This project was developed in colaboration with [damachad]https://github.com/damachad/42_minishell.
 
 ## Features
 	
