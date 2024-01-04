@@ -25,16 +25,6 @@ This is a shell implementation called Minishell. It is a command-line interprete
 
 This project was developed in colaboration with [damachad]https://github.com/damachad/42_minishell.
 
-## Words of Wisdom
-### Focus on the requirement :dart:
-Please implement only what the subject explicitly requests. Anything that is not requested is not a requirement, and each additional implementation increases development time and adds unnecessary complexity to the project.
-
-### Perform extensive testing :microscope:
-This project has many points of attention that have arisen during development. All of these points have been included in the tests on this page. While not exhaustive, they provide a starting point for things that should work and things that should not. [Check the tests](#tests)
-
-### Study other shells :mag:
-Our reference shell is Bash, but running certain commands in other shells may produce different results and help us better understand why certain things happen. Use Bash as a reference, but be open to examining the workings of other shells.
-
 ## Features
 	
 - **Prompt display:** Minishell displays a prompt when waiting for a new command.
