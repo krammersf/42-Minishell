@@ -425,7 +425,7 @@ cd notexist
 ```bash
 pwd
 ```
-> /home/wcorrea-/workplace/common_core/minishell/minishell
+> /home/fde-carv-/workplace/common_core/minishell/minishell
 
 ```bash
 pwd -L
